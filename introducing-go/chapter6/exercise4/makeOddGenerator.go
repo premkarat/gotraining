@@ -11,9 +11,10 @@ func main() {
 
 func makeOddGenerator() func() uint {
 	i := uint(1)
-	return func() uint {
+	generator := func() uint {
 		ret := i
 		i += 2
 		return ret
 	}
+	return generator
 }
