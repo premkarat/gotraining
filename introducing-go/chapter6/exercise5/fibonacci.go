@@ -8,13 +8,14 @@ func main() {
 	fib(n)
 }
 
-func fib(n uint) uint {
-	if n != 0 {
-		fmt.Printf(n + fib(n-1))
-	} else {
-		return 0
+func fib(n uint) {
+	pre := 1
+	cur := 1
+	fmt.Printf("%d %d ", pre, cur)
+	for i := uint(3); i <= n; i++ {
+		seq := pre + cur
+		fmt.Printf("%d ", seq)
+		pre, cur = cur, seq
 	}
-	return 0
+	fmt.Println()
 }
-
-fmt.Printf(format, a)
