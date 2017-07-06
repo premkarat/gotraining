@@ -10,7 +10,5 @@ func main() {
 }
 
 func swap(xptr *int, yptr *int) {
-	tmp := *xptr
-	*xptr = *yptr
-	*yptr = tmp
+	*xptr, *yptr = *yptr, *xptr
 }
